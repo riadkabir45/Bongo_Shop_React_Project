@@ -19,11 +19,15 @@ const ShopContextProvider = (props) => {
             return;
         }
 
+        // creates a shallow copy of the current cartItems object
         const cartData = { ...cartItems };
 
+        // specific size of that item (cartData[itemId][size]) exists
+        // (cartData[itemId][size] || 0) + 1 => If the size exists, it increments the quantity by 1. If the size doesn't exist (undefined), it initializes it to 0 and then adds 1.
         if (cartData[itemId]) {
             cartData[itemId][size] = (cartData[itemId][size] || 0) + 1;
         } else {
+            // If the item with the given itemId doesn't exist in the cart, it initializes it with an object where the key is the size and the value is 1
             cartData[itemId] = { [size]: 1 };
         }
 
