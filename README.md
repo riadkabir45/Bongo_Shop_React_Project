@@ -31,5 +31,43 @@ link : https://tailwindcss.com/docs/guides/vite
 
 follow step 2 - step 5
 
-![HomePage](https://github.com/user-attachments/assets/5334bbbe-f76a-48ff-91a6-bc24646d6b90)
+SignUp Page
+
+![SignupPage](https://github.com/user-attachments/assets/9febf703-36f1-471c-8ac6-a3c87c165ef9)
+
+Login Page
+
+![LoginPage](https://github.com/user-attachments/assets/3fe140d6-1d7e-4f6a-81c6-4f3544d8480a)
+
+Home Page
+
+![HomePage](https://github.com/user-attachments/assets/79115451-e76d-46b2-8edf-93b8f8852e02)
+
+Collection Page
+
+![CollectionPage](https://github.com/user-attachments/assets/b1553aef-9587-4d38-9c33-24347ff1f574)
+
+ProductDetails Page
+
+![ProductDetails](https://github.com/user-attachments/assets/f9d2f019-2390-4f14-9424-e263e9009b7f)
+
+Cart Page
+
+![CartPage](https://github.com/user-attachments/assets/68e34138-6057-4d9c-98da-fcd31606a723)
+
+PlaceOrder Page
+
+![PlaceOrder](https://github.com/user-attachments/assets/c66797e0-cfca-475a-ae22-b575a2ace4f1)
+
+TrackOreder Page
+
+![TrackOreder](https://github.com/user-attachments/assets/3d218531-e70f-45f0-b242-43d976ad6bce)
+
+Contact Page
+
+![Contact](https://github.com/user-attachments/assets/cb0ae62c-4d0e-4f7b-841e-152fa6e8cd88)
+
+About Page
+
+![AboutPage](https://github.com/user-attachments/assets/609c1c05-4a26-4b3e-a23a-63563c27bb3e)
 
