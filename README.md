@@ -30,3 +30,6 @@ To install tailwindcss and vite support use the following link
 link : https://tailwindcss.com/docs/guides/vite
 
 follow step 2 - step 5
+
+![HomePage](https://github.com/user-attachments/assets/5334bbbe-f76a-48ff-91a6-bc24646d6b90)
+
