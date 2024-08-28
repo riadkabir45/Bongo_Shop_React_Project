@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const [currentState, setCurrentState] = useState("Login");
 
   const onSubmitHandler = async (event) => {
@@ -14,6 +18,7 @@ const Login = () => {
         <hr className="border-none h-[1.5px] w-8 bg-gray-800" />
       </div>
       {currentState === "Login" ? (
+        
         ""
       ) : (
         <input
@@ -42,7 +47,7 @@ const Login = () => {
           : <p onClick={()=>setCurrentState('Login')} className="cursor-pointer">Login Here</p>
         }
       </div>
-      <button className="bg-black text-white font-light px-8 py-2 mt-4">{currentState==='Login' ? 'Sign In' : 'Sign Up'}</button>
+      <button onClick={() => navigate('/')} className="bg-black text-white font-light px-8 py-2 mt-4">{currentState==='Login' ? 'Sign In' : 'Sign Up'}</button>
     </form>
   );
 };
