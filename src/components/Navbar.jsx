@@ -5,25 +5,26 @@ import { useCallback } from "react";
 import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
+  const BASE_URL = import.meta.env.BASE_URL;
   const [visible,setVisible]=useState(false);
   const {setShowSearch , getCartCount} = useContext(ShopContext);
   return (
     <div className="flex items-center justify-between py-5 font-medium">
-      <Link to='/'> <img src={assets.logo} className="w-36" /> </Link>
+      <Link to={BASE_URL}> <img src={assets.logo} className="w-36" /> </Link>
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
-        <NavLink to="/" className="flex flex-col items-center gap-1">
+        <NavLink to={BASE_URL} className="flex flex-col items-center gap-1">
           <p>Home</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="/collection" className="flex flex-col items-center gap-1">
+        <NavLink to={BASE_URL+"collection"} className="flex flex-col items-center gap-1">
           <p>Collection</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="/about" className="flex flex-col items-center gap-1">
+        <NavLink to={BASE_URL+"about"} className="flex flex-col items-center gap-1">
           <p>About</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
-        <NavLink to="/contact" className="flex flex-col items-center gap-1">
+        <NavLink to={BASE_URL+"contact"} className="flex flex-col items-center gap-1">
           <p>Contact</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
@@ -32,7 +33,7 @@ const Navbar = () => {
       <div className="flex items-center gap-6">
         <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className="w-5 cursor-pointer" alt="" />
         <div className="group relative">
-         <Link to='/login'> <img
+         <Link to={BASE_URL+'login'}> <img
             src={assets.profile_icon}
             className="w-5 cursor-pointer"
             alt=""
@@ -45,7 +46,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <Link to="/cart" className="relative">
+        <Link to={BASE_URL+"cart"} className="relative">
           <img src={assets.cart_icon} className="w-5 min-w-5" alt="" />
           <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
             {getCartCount()}
@@ -62,10 +63,10 @@ const Navbar = () => {
                 Back
               </p>
             </div>
-            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/'>Home</NavLink>
-            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/collection'>Collection</NavLink>
-            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/about'>About</NavLink>
-            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to='/contact'>Contact</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to={BASE_URL}>Home</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to={BASE_URL+'collection'}>Collection</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to={BASE_URL+'about'}>About</NavLink>
+            <NavLink onClick={() => setVisible(false)} className='py-2 pl-6 border' to={BASE_URL+'contact'}>Contact</NavLink>
           </div>
       </div>
     </div>

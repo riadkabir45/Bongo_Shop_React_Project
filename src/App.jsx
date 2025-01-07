@@ -15,24 +15,25 @@ import SearchBar from './components/SearchBar'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 const App = () => {
+  const BASE_URL = import.meta.env.BASE_URL;
+  
+  
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[pvw]'>
       <ToastContainer/>
      <Navbar/>
      <SearchBar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Bongo_Shop_React_Project' element={<Home/>}/>
-        <Route path='/collection' element={<Collection/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/product/:productId' element={<Product/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='place-order' element={<PlaceOder/>}/>
-        <Route path='/orders' element={<Orders/>}/>
+        <Route path={BASE_URL} element={<Home/>}/>
+        <Route path={BASE_URL+'collection'} element={<Collection/>}/>
+        <Route path={BASE_URL+'about'} element={<About/>}/>
+        <Route path={BASE_URL+'contact'} element={<Contact/>}/>
+        <Route path={BASE_URL+'product/:productId'} element={<Product/>}/>
+        <Route path={BASE_URL+'cart'} element={<Cart/>}/>
+        <Route path={BASE_URL+'login'} element={<Login/>}/>
+        <Route path={BASE_URL+'place-order'} element={<PlaceOder/>}/>
+        <Route path={BASE_URL+'orders'} element={<Orders/>}/>
       </Routes>
       <Footer/>
     </div>

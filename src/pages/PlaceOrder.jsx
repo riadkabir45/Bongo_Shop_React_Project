@@ -5,6 +5,7 @@ import { assets } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext'
 
 const PlaceOrder = () => {
+  const BASE_URL = import.meta.env.BASE_URL;
   const [method,setMethod] = useState('cod');
   const {navigate}=useContext(ShopContext);
   return (
@@ -57,7 +58,7 @@ const PlaceOrder = () => {
           </div>
         </div>
         <div className="w-full text-end mt-8">
-          <button onClick={()=>navigate('/orders')} className='bg-black text-white px-16 py-3 text-sm'> 
+          <button onClick={()=>navigate(BASE_URL+'orders')} className='bg-black text-white px-16 py-3 text-sm'> 
               PLACE ORDER
           </button>
         </div>

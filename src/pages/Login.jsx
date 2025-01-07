@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
 
   const navigate = useNavigate();
+  const BASE_URL = import.meta.env.BASE_URL;
 
   const [currentState, setCurrentState] = useState("Login");
 
@@ -47,7 +48,7 @@ const Login = () => {
           : <p onClick={()=>setCurrentState('Login')} className="cursor-pointer">Login Here</p>
         }
       </div>
-      <button onClick={() => navigate('/')} className="bg-black text-white font-light px-8 py-2 mt-4">{currentState==='Login' ? 'Sign In' : 'Sign Up'}</button>
+      <button onClick={() => navigate(BASE_URL)} className="bg-black text-white font-light px-8 py-2 mt-4">{currentState==='Login' ? 'Sign In' : 'Sign Up'}</button>
     </form>
   );
 };
